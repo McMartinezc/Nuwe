@@ -1,0 +1,27 @@
+	public static boolean checkCoupon(String enteredCode, String correctCode, String currentDate,
+			String expirationDate) {
+
+		boolean validacio = false;
+
+		try {
+			SimpleDateFormat format = new SimpleDateFormat("dd-MM-yy");
+			Date data1 = format.parse(currentDate);
+			Date data2 = format.parse(expirationDate);
+
+			if ((enteredCode.equals(correctCode)) && (data1.after(data2))) {
+				validacio = false;
+
+			} else if ((enteredCode.equals(correctCode)) && (data1.equals(data2))) {
+				validacio = true;
+
+			} else if ((enteredCode.equals(correctCode)) && (data1.before(data2))) {
+				validacio = true;
+
+			}
+		} catch (ParseException error) {
+
+			System.out.println("Error al introduïr les dades.");
+		}
+
+		return validacio;
+	}
