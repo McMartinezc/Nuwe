@@ -12,7 +12,6 @@ class myLambda {
 
 	// Metode verifica el num si és palindrom
 	public boolean isPalindrome(int num) {
-
 		boolean palindrome;
 		palindrome = Integer.toString(num).equals(new StringBuilder(Integer.toString(num)).reverse().toString());
 		return palindrome;
