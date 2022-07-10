@@ -1,0 +1,40 @@
+class myLambda {
+
+	// Metode verifica el num si és parell
+	public boolean isOdd(int num) {
+		return num % 2 == 0;
+	}
+
+	// Metode verifica el num si és primer
+	public boolean isPrime(int num) {
+		return num > 1 && IntStream.range(2, num).noneMatch(index -> num % index == 0);
+	}
+
+	// Metode verifica el num si és palindrom
+	public boolean isPalindrome(int num) {
+
+		boolean palindrome;
+
+		palindrome = Integer.toString(num).equals(new StringBuilder(Integer.toString(num)).reverse().toString());
+
+		return palindrome;
+
+	}
+
+//Metode crida a la resta de funcions e imprimeix el resultat, tenint en compte si algún número és 0 o negatiu
+	public void checker(ArrayList<Integer> llistaNums) {
+
+		llistaNums.forEach((num) -> {
+			if (num <= 0) {
+				System.out.println(num + " NOT A POSSIBLE OPTION");
+			} else {
+				System.out.println("Input: " + num);
+				System.out.println("Output: ");
+				System.out.println("isOdd: " + isOdd(num));
+				System.out.println("isPrime: " + isPrime(num));
+				System.out.println("isPalindrome: " + isPalindrome(num));
+			}
+		});
+	}
+
+}
