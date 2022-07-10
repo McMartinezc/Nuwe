@@ -14,9 +14,7 @@ class myLambda {
 	public boolean isPalindrome(int num) {
 
 		boolean palindrome;
-
 		palindrome = Integer.toString(num).equals(new StringBuilder(Integer.toString(num)).reverse().toString());
-
 		return palindrome;
 
 	}
