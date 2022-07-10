@@ -21,7 +21,7 @@ class myLambda {
 
 	}
 
-//Metode crida a la resta de funcions e imprimeix el resultat, tenint en compte si algún número és 0 o negatiu
+//Metode que realitza la crida a la resta de metodes e imprimeix el resultat, tenint en compte si algún número és 0 o negatiu
 	public void checker(ArrayList<Integer> llistaNums) {
 
 		llistaNums.forEach((num) -> {
